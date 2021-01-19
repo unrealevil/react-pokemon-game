@@ -1,0 +1,51 @@
+.button {
+    position: relative;
+    background: white;
+    border: 2px solid #ffc55b;
+    border-radius: 10px;
+    vertical-align: middle;
+    padding: 12px;
+    outline: none !important;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.button.btn-green {
+    border-color: darkgreen;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: -5px;
+    bottom: -5px;
+    background: white;
+    border-radius: 13px;
+    z-index: -1;
+    box-shadow: 0 3px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffd78e), to(#ffc55b));
+    background: linear-gradient(to bottom, #ffd78e, #ffc55b);
+    border-color: white;
+}
+
+.button.btn-green:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#7cde71), to(#2e852e));
+    background: linear-gradient(to bottom, #7cde71, #2e852e);
+}
+
+.button:hover:after {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffd78e), to(#ffc55b));
+    background: linear-gradient(to bottom, #ffd78e, #ffc55b);
+    box-shadow: 0 0 5px 2px white, 0 0 15px #ffe9c1, 0 3px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
+button.btn-green:hover:after {
+    background: -webkit-gradient(linear, left top, left bottom, from(#7cde71), to(#2e852e));
+    background: linear-gradient(to bottom, #7cde71, #2e852e);
+}

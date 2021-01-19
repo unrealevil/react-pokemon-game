@@ -1,0 +1,207 @@
+
+.pokemon {
+    text-align: center;
+    position: relative;
+    width: 180px;
+    height: 260px;
+    min-width: 150px;
+    margin: 20px;
+    background-image: url(img/card.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pokemon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+    width: 76%;
+    height: 53%;
+    left: 12%;
+    top: 47%;
+    transform: translateY(-50%);
+    background-image: url(img/pockeball.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pokemon * {
+    vertical-align: middle;
+}
+
+.pokemon .card {
+    max-width: 100%;
+}
+
+.pokemon label {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.pokemon .radio {
+    position: absolute;
+    opacity: 0;
+}
+
+.pokemon .lvl {
+    color: #00b8ff;
+    position: absolute;
+    left: 24px;
+    top: 16px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.pokemon .sex {
+    position: absolute;
+    right: 32px;
+    top: 18px;
+}
+
+.pokemon .sex .icon {
+    width: 18px;
+}
+
+.pokemon .sex .icon.female {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.pokemon .sprite {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100px;
+}
+
+.pokemon .details {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    right: 0;
+}
+
+.pokemon .details .name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #222;
+    margin: 4px 0;
+    display: inline-block;
+}
+
+.pokemon .details .hp {
+    width: 60%;
+    margin: auto;
+}
+
+.pokemon .details .hp .text {
+    color: #666;
+    display: inline-block;
+    padding-top: 4px;
+    font-size: 14px;
+}
+
+.pokemon .details .hp .bar {
+    border-radius: 50px;
+    background: #073fa7;
+    border: 3.5px solid #00a3e2;
+    height: 18px;
+    overflow: hidden;
+}
+
+.pokemon .details .hp .bar .health {
+    width: 50%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(lime), to(#8bf500));
+    background: linear-gradient(to right, lime, #8bf500);
+}
+
+.pokemon .details .hp .bar .health.low {
+    background: -webkit-gradient(linear, left top, right top, from(#ffcc00), to(#f1f500));
+    background: linear-gradient(to right, #ffcc00, #f1f500);
+}
+
+.pokemon .details .hp .bar .health.critical {
+    background: -webkit-gradient(linear, left top, right top, from(#d20000), to(#f51700));
+    background: linear-gradient(to right, #d20000, #f51700);
+}
+
+.pokemon .pokeball {
+    position: absolute;
+    fill: white;
+    opacity: 0.5;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 76%;
+    left: 12%;
+    top: 47%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.pokemon .cell {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.pokemon .cell .bg {
+    stroke: rgba(255, 255, 255, 0.5);
+    fill: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 1.15s ease;
+    transition: all 1.15s ease;
+}
+
+.pokemon .cell .stroke {
+    stroke: white;
+    stroke-width: 4px;
+}
+
+.pokemon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 2px;
+    height: 180px;
+    border-radius: 100% 100% 70% 70% / 70% 70% 20% 20%;
+    background: transparent;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    z-index: -2;
+}
+
+.pokemon.selected:after {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon.selected .cell {
+    -webkit-filter: drop-shadow(0px 2px 6px white);
+    filter: drop-shadow(0px 2px 6px white);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.pokemon.selected .cell .bg {
+    fill: rgba(255, 246, 146, 0.9);
+    fill: url(#bg-gradient-selected) !important;
+}
+
+.pokemon.selected .pokeball {
+    opacity: 0.8;
+}
+
+.pokemon.selected .sprite {
+    -webkit-animation: bounce 0.8s ease infinite;
+    animation: bounce 0.8s ease infinite;
+}

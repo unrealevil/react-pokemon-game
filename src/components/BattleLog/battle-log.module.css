@@ -1,0 +1,16 @@
+.battle-log {
+    margin: 10px auto;
+    width: 50%;
+    height: 200px;
+    overflow: scroll;
+    text-align: left;
+    padding: 5px 5px;
+    border: 1px #ceefff;
+    border-radius: 10px;
+    background-color: #ceefff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+}
+
+.battle-log p {
+    margin: 10px 2px;
+}

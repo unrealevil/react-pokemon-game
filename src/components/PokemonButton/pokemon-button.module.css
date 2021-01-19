@@ -1,0 +1,41 @@
+.pokemon-btn {
+    text-align: center;
+    position: relative;
+    width: 130px;
+    height: 110px;
+    min-width: 130px;
+    margin: 10px;
+}
+
+.pokemon-btn .sprite {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 50px;
+}
+
+.pokemon-btn .lvl {
+    color: #00b8ff;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.pokemon-btn .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pokemon-btn .details .name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #222;
+    margin: 2px 0;
+    display: inline-block;
+}
